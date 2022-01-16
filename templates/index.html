@@ -1,10 +1,101 @@
 {% extends 'base.html' %}
 {% include 'header.html' %}
 
-{% block title %} Home {% endblock %}
+{% block title %} {% endblock %}
 
 {% block body %}
 
-<h1>Filters etc etc</h1>
+<form action="{{url_for("index")}}" method="post">
+
+<div class="card border border-dark" style="margin: 20px">
+  <h6 class="card-header">How to Use UBC Course Finder</h6>
+  <div class="card-body">
+    <p class="card-text">...</p>
+  </div>
+</div>
+
+<div class="card border border-dark" style="margin: 20px">
+  <h6 class="card-header">Search</h6>
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <div class="form-check">
+          <span style="display:inline-block">
+              <label class="form-label" for="course_code">Course Code</label>
+              <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" id="course_code">
+                <input type="checkbox" class="btn-check" id="1xx" autocomplete="off" name="course_code" value="1">
+                <label class="btn btn-outline-primary" for="1xx">1xx</label>
+                <input type="checkbox" class="btn-check" id="2xx" autocomplete="off" name="course_code" value="2">
+                <label class="btn btn-outline-primary" for="2xx">2xx</label>
+                <input type="checkbox" class="btn-check" id="3xx" autocomplete="off" name="course_code" value="3">
+                <label class="btn btn-outline-primary" for="3xx">3xx</label>
+                <input type="checkbox" class="btn-check" id="4xx" autocomplete="off" name="course_code" value="4">
+                <label class="btn btn-outline-primary" for="4xx">4xx</label>
+                <input type="checkbox" class="btn-check" id="5xx+" autocomplete="off" name="course_code" value="5">
+                <label class="btn btn-outline-primary" for="5xx+">5xx+</label>
+              </div>
+          </span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-check">
+          <span style="display:inline-block">
+              <label class="form-label" for="subject_code">Subject Code</label>
+              <input type="text" id="subject_code" name="subject_code" class="form-control" placeholder="Example: CPSC" />
+          </span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-check">
+          <span style="display:inline-block">
+              <label class="form-label" for="average">Average</label>
+              <input type="text" id="average" name="average" class="form-control" placeholder="Example: 80" />
+          </span>
+        </div>
+      </div>
+      <div class="col" style="padding: 20px">
+        <div class="form-check">
+          <label class="form-label" for="offered_in_this_term">Offered In This Term</label>
+          <input class="form-check-input" type="checkbox" value="this term" id="offered_in_this_term" name="offered">
+        </div>
+        <div class="form-check">
+          <label class="form-label" for="offered_in_summer">Offered In Summer</label>
+          <input class="form-check-input" type="checkbox" value="summer" id="offered_in_summer" name="offered">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline" style="padding-top: 30px">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card border border-dark" style="margin: 20px">
+  <h6 class="card-header">
+    Courses
+  </h6>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Subject</th>
+          <th scope="col">Course</th>
+          <th scope="col">Title</th>
+          <th scope="col">Average</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CPSC</td>
+          <td>110</td>
+          <td>Computation, Programs, and Programming</td>
+          <td>83.5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 {% endblock %}

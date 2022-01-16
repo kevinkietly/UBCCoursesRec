@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 
-{% block title %} Home {% endblock %}
+{% block title %} {% endblock %}
 
 {% block body %}
 
-<div class="jumbotron p-3">
-    <div class="well text-center">
-        <h1>UBC Course Recommender</h1>
-    </div>
-</div>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://logos-download.com/wp-content/uploads/2016/10/UBC_logo.png"
+        class="me-2"
+        height="30"
+        alt="UBC Logo"
+        loading="lazy"
+      />
+      UBC Course Finders
+    </a>
+  </div>
+</nav>
 
 {% endblock %}
