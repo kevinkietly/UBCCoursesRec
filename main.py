@@ -15,7 +15,8 @@ def index():
         offered = request.form.getlist("offered")
         print(course_code)
         print(subject_code + " " + average)
-        #if(endyear < startyear):
+        print(startyear)
+        print(endyear)
         print(offered)
     return render_template("index.html")
 
