@@ -152,6 +152,8 @@ def avg_of_avgs(loc):
     returns list of courses with averages that
     have been averaged out over the year range
     """
+    if loc == []:
+        return []
     loc_final = []
     course = loc[0][0]
     avg = [loc[0][1]]
@@ -175,6 +177,8 @@ def filter_avg(loc, avg):
     returns courses that have an average over the given
     avg over all the years looked at
     """
+    if loc == []:
+        return []
     loc_final = []
     i = 0
     for c in loc:
