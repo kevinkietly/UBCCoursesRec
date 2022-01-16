@@ -1,12 +1,12 @@
 from flask import Flask, request, render_template
 import pandas as pd
 import numpy as np
-import urllib.request
 
 app = Flask(__name__)
 
 @app.route('/', methods = ["GET", "POST"])
 def index():
+    filter_avgs = 0
     if request.method == "POST":
         course_code = request.form.getlist("course_code")
         subject_code = request.form.get("subject_code")
@@ -66,7 +66,7 @@ def index():
         # filter for courses w avg over user defined minimum
         filter_avgs = filter_avg(calc_avgs, average)
         print(filter_avgs)
-        if filter_avgs == []:
+        if not filter_avgs:
             crse = ""
             avg = ""
             mx = ""
@@ -77,8 +77,7 @@ def index():
             avg = filter_avgs[0][1]
             mx = filter_avgs[0][2]
             mn = filter_avgs[0][3]
-    # return render_template("index.html", crse = filter_avgs[0][0], avg = filter_avgs[0][1], mx = filter_avgs[0][2], mn = filter_avgs[0][3])
-    return render_template("index.html", filter_avgs = filter_avgs)
+    return render_template("index.html", filter_avgs=filter_avgs)
 
 # creating list of terms to loop over
 def make_years(start, stop, summer, winter):
