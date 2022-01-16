@@ -8,9 +8,9 @@
 <form action="{{url_for("index")}}" method="post">
 
 <div class="card border border-dark" style="margin: 20px">
-  <h6 class="card-header">How to Use UBC Course Finder</h6>
+  <h6 class="card-header">How to Use UBC Course & Rec</h6>
   <div class="card-body">
-    <p class="card-text">...</p>
+    <p class="card-text">Select the filters you would like to view results for, such as the course code, subject code, and the threshold for the average of the courses you would like to view. You may also select a range of years and select the Winter or Summer session to yield more accurate results.</p>
   </div>
 </div>
 
@@ -100,29 +100,10 @@
 
 <div class="card border border-dark" style="margin: 20px">
   <h6 class="card-header">
-    Courses
+    Courses (COURSE, AVERAGE, MAX, MIN)
   </h6>
   <div class="card-body">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Subject</th>
-          <th scope="col">Course</th>
-          <th scope="col">Average</th>
-          <th scope="col">Max Average</th>
-          <th scope="col">Min Average</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>CPSC</td>
-          <td>110</td>
-          <td>78.1</td>
-          <td>90</td>
-          <td>50</td>
-        </tr>
-      </tbody>
-    </table>
+    {{ filter_avgs }}
   </div>
 </div>
 

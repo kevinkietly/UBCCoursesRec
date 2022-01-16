@@ -66,7 +66,19 @@ def index():
         # filter for courses w avg over user defined minimum
         filter_avgs = filter_avg(calc_avgs, average)
         print(filter_avgs)
-    return render_template("index.html")
+        if filter_avgs == []:
+            crse = ""
+            avg = ""
+            mx = ""
+            mn = ""
+            return render_template("index.html")
+        else:
+            crse = filter_avgs[0][0]
+            avg = filter_avgs[0][1]
+            mx = filter_avgs[0][2]
+            mn = filter_avgs[0][3]
+    # return render_template("index.html", crse = filter_avgs[0][0], avg = filter_avgs[0][1], mx = filter_avgs[0][2], mn = filter_avgs[0][3])
+    return render_template("index.html", filter_avgs = filter_avgs)
 
 # creating list of terms to loop over
 def make_years(start, stop, summer, winter):
