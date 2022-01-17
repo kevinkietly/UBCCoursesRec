@@ -4,7 +4,7 @@ Are you wasting a lot of time looking through UBC PAIRS to decide on a GPA boost
 https://www.youtube.com/watch?v=Jxyv92sYUMY
 
 How to run it:
-In your terminal
+In your terminal \n
 cd 'path to the project'
 python3 -m venv venv
 . venv/bin/activate
