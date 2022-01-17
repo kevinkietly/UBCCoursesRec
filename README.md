@@ -3,10 +3,10 @@ Are you wasting a lot of time looking through UBC PAIRS to decide on a GPA boost
 
 https://www.youtube.com/watch?v=Jxyv92sYUMY
 
-How to run it:
-In your terminal \n
-cd 'path to the project'
-python3 -m venv venv
-. venv/bin/activate
-pip install Flask
-pip install pandas
+How to run it:<br />
+In your terminal<br />
+cd 'path to the project'<br />
+python3 -m venv venv<br />
+. venv/bin/activate<br />
+pip install Flask<br />
+pip install pandas<br />
