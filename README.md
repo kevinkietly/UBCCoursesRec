@@ -3,7 +3,7 @@ Are you wasting a lot of time looking through UBC PAIRS to decide on a GPA boost
 
 View the demo [here](https://www.youtube.com/watch?v=Jxyv92sYUMY).
 
-# Build UBC Courses & Rec
+## Build UBC Courses & Rec
 ```bash
 git clone https://github.com/kevinkietly/UBC-Courses-And-Rec.git
 cd UBC-Courses-And-Rec
