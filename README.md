@@ -5,7 +5,7 @@ View the demo [here](https://www.youtube.com/watch?v=Jxyv92sYUMY).
 
 ## Build UBC Courses & Rec
 ```bash
-git clone https://github.com/kevinkietly/UBC-Courses-And-Rec.git
+git clone https://github.com/kevinkietly/UBCCoursesRec.git
 cd UBC-Courses-And-Rec
 python3 -m venv venv
 . venv/bin/activate
